@@ -1,0 +1,164 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container geral */
+#container {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Caixa genérica */
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+/* Produtos */
+.produtos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 4px solid #e3b77d;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-family: 'Cardo', serif;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.preco {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+/* Ícones */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* espaço entre os ícones */
+}
+
+.icons img {
+    height: 28px; /* tamanho dos ícones */
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icons img:hover {
+    transform: scale(1.2); /* aumenta levemente ao passar o mouse */
+}
+
+/* Logo */
+.logo {
+    width: 200px;    /* largura máxima da logo */
+    height: auto;    /* mantém proporção */
+    display: block;  /* para centralizar */
+    margin: 0 auto;  /* centraliza horizontalmente */
+}
+
+.logo img {
+    width: 80px;   /* ajusta o tamanho da logo */
+    height: auto;   /* mantém a proporção */
+    display: block; /* garante que seja tratado como bloco */
+}
+
+/* Estilo da barra de navegação */
+nav {
+    grid-area: nav;
+    background-color: #efc27e;
+    display: flex;
+    justify-content: center; /* centraliza os links */
+    gap: 40px;               /* espaço entre os links */
+    padding: 15px 20px;
+    border-radius: 25px;
+}
+
+/* Links do nav */
+nav a {
+    text-decoration: none;   /* tira o sublinhado */
+    color: #2c2c2c;          /* cor do texto */
+    font-family: 'Sorts Mill Goudy', serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito hover */
+nav a:hover {
+    color: #3e5b81;   /* cor ao passar o mouse */
+    transform: scale(1.1); /* leve aumento */
+}
+
+header {
+  background-color: #3f5475;
+  padding: 15px 30px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* se apertar, quebra linha */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  height: 60px; /* controla o tamanho da logo */
+}
+
+.logo h1 {
+  color: #f6d28b;
+  margin: 0;
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.acoes input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.acoes img {
+  height: 28px;
+  cursor: pointer;
+}
+
