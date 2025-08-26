@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="grid.css">
 
-    <!-- Fontes Google -->
+    <!-- Importando fontes Google -->
     <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&family=Crimson+Pro&family=Cardo&display=swap"
         rel="stylesheet">
 </head>
@@ -17,23 +17,24 @@
     <div id="app">
 
         <!-- Cabeçalho -->
-<header>
-    <div class="header-container">
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <img src="imagens/logo.png" alt="Logo da Ponto & Vírgula">
+                    <h1>Ponto &amp; Vírgula</h1>
+                </div>
 
-        <div class="logo">
-            <img src="imagens/logo.png" alt="Logo da Ponto & Vírgula">
-            <h1>Ponto & Vírgula</h1>
-        </div>
+                <div class="acoes">
+                    <input type="text" placeholder="Buscar...">
+                    <!-- Link para a página de login -->
+                    <a href="login.php">
+                        <img src="imagens/icone_login.png" alt="Usuário">
+                    </a>
+                    <img src="imagens/carrinho.png" alt="Carrinho">
+                </div>
 
-        <!-- Ações -->
-        <div class="acoes">
-            <input type="text" placeholder="Buscar...">
-            <img src="imagens/icone_login.png" alt="Usuário">
-            <img src="imagens/carrinho.png" alt="Carrinho">
-            <img src="imagens/instagram.png" alt="Instagram">
-        </div>
-    </div>
-</header>
+            </div>
+        </header>
         <!-- Navegação -->
         <nav class="nav">
             <a href="#">Planners</a>
@@ -43,35 +44,40 @@
             <a href="#">Papelaria</a>
         </nav>
 
+
         <!-- Conteúdo principal -->
         <main class="main">
-            <h2>Seja Bem-vindo!</h2>
-            <p class="slogan">"SLOGANSLOGANSLOGANSLOGAN..."</p>
+            <div>
+                <h2>SEJA BEM-VINDO!</h2>
+                <p class="slogan-box">“Organize com arte, viva com leveza.”</p>
 
-            <section class="produtos">
-                <div class="card">
-                    <h3>Caderno Galáxia</h3>
-                    <img src="imagens/caderno1.jpg" alt="Caderno Galáxia">
-                    <p class="preco">R$889,99</p>
-                </div>
+                <section class="produtos">
+                    <div class="card">
+                        <h3>Agenda Preta</h3>
+                        <img src="imagens/agenda1.jpg" alt="Agenda Preta">
+                        <p class="preco">R$19,99</p>
+                    </div>
 
-                <div class="card">
-                    <h3>Caderno Jogo</h3>
-                    <img src="imagens/caderno2.jpg" alt="Caderno Jogo">
-                    <p class="preco">R$899,98</p>
-                </div>
+                    <div class="card">
+                        <h3>Agenda Rosa</h3>
+                        <img src="imagens/agenda2.jpg" alt="Agenda Rosa">
+                        <p class="preco">R$19,99</p>
+                    </div>
 
-                <div class="card">
-                    <h3>Caderno Rosa</h3>
-                    <img src="imagens/caderno3.jpg" alt="Caderno Rosa">
-                    <p class="preco">R$∞,99</p>
-                </div>
-            </section>
+                    <div class="card">
+                        <h3>Agenda Branca</h3>
+                        <img src="imagens/agenda3.jpg" alt="Agenda Branca">
+                        <p class="preco">R$19,99</p>
+                    </div>
+                </section>
+            </div>
+
         </main>
 
         <!-- Rodapé -->
         <footer class="footer">
-            <p>Desenvolvido por: Alice Righetti, Júlia Rodrigues, Kaique Almeida, Rafaela Cypriano e Rafaela Megumi</p>
+            <p>Desenvolvido pelos alunos: Alice Righetti, Júlia Rodrigues, Kaique Almeida, Rafaela Cypriano e Rafaela
+                Megumi</p>
             <p>Projeto acadêmico do curso Técnico em Informática – E-commerce | Colégio Técnico</p>
         </footer>
 
