@@ -159,7 +159,7 @@ nav a {
     color: #2c2c2c;
     font-family: 'Sorts Mill Goudy', serif;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 19px;
     transition: color 0.3s ease, transform 0.2s ease;
     letter-spacing: 1px;
 }
@@ -177,12 +177,35 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
+
+
 .produtos {
     display: flex;
     justify-content: center;
     /*margin-top: 5px;*/
     gap: 50px; 
     flex-wrap: wrap; 
+}
+
+.imagem-alternativa/*alice*/
+{
+    display: none;
+}
+
+.card:hover/*alice*/
+{
+    color: #3e5b81;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+  .card:hover .imagem-alternativa {/*alice*/
+    display: block;
+    transition: 0.2s;
+}
+.card:hover .imagem-padrao {/*alice*/
+    display: none;
+    transition: 1s;
 }
 
 .main > div {
@@ -202,15 +225,15 @@ nav a:hover {
 .slogan-box {
     background-color: #efc27e; 
     padding: 1rem 2rem;
-    border-radius: 25px;
+    border-radius: 30px;
     display: block;
     width: 90%;
     max-width: 1200px;
     text-align: center;   
     font-size: clamp(14px, 1.5vw, 18px);
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Sorts Mill Goudy', serif;
     margin: 0 auto 40px auto;
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 /* LOGIN */
