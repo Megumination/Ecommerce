@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponto & Vírgula | Carrinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="carrinho-body">
+        <div class="carrinho-container">
+
+            <!-- Carrinho -->
+            <div class="carrinho-items">
+                <h2>🛒 CARRINHO</h2>
+
+                <!-- Produto 1 -->
+                <div class="item-card" data-id="1">
+                    <img src="imagens/caderno-rosa.png" alt="Caderno Rosa">
+                    <div class="item-info">
+                        <h3 class="nome-produto">Caderno Rosa</h3>
+                        <p class="preco-produto">R$89,99</p>
+                        <p>
+                            QUANT:
+                            <input type="number" class="quantidade" value="1" min="1">
+                            <button class="btn-excluir">EXCLUIR</button>
+                        </p>
+                    </div>
+                    <div class="item-actions">
+                        <div class="checkbox"></div>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="item-card" data-id="2">
+                    <img src="imagens/caneta-azul.png" alt="Caneta Azul">
+                    <div class="item-info">
+                        <h3 class="nome-produto">Caneta Azul</h3>
+                        <p class="preco-produto">R$12,50</p>
+                        <p>
+                            QUANT:
+                            <input type="number" class="quantidade" value="2" min="1">
+                            <button class="btn-excluir">EXCLUIR</button>
+                        </p>
+                    </div>
+                    <div class="item-actions">
+                        <div class="checkbox"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagamento -->
+            <div class="pagamento">
+                <h2>PAGAMENTO</h2>
+                <img src="imagens/resumo-produto.png" alt="Resumo Produto">
+                <div class="total">
+                    <p>TOTAL: <span id="total">R$114,99</span></p>
+                    <p>QTDE: <span id="qtde">2</span></p>
+                </div>
+
+                <div class="metodos">
+                    <img src="imagens/pix-icon.png" alt="PIX">
+                    <img src="imagens/debito-icon.png" alt="Cartão de Débito">
+                    <img src="imagens/credito-icon.png" alt="Cartão de Crédito">
+                </div>
+
+                <button class="btn-confirmar">CONFIRMAR PAGAMENTO</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Script simples pra atualizar total (mais tarde PHP pode gerar os valores)
+        const itens = document.querySelectorAll('.item-card');
+        const totalEl = document.getElementById('total');
+        const qtdeEl = document.getElementById('qtde');
+
+        function atualizarTotal() {
+            let total = 0;
+            let qtde = 0;
+            itens.forEach(item => {
+                const preco = parseFloat(item.querySelector('.preco-produto').textContent.replace('R$', '').replace(',', '.'));
+                const quantidade = parseInt(item.querySelector('.quantidade').value);
+                total += preco * quantidade;
+                qtde += quantidade;
+            });
+            totalEl.textContent = 'R$' + total.toFixed(2).replace('.', ',');
+            qtdeEl.textContent = qtde;
+        }
+
+        itens.forEach(item => {
+            const input = item.querySelector('.quantidade');
+            const btnExcluir = item.querySelector('.btn-excluir');
+
+            input.addEventListener('change', atualizarTotal);
+            btnExcluir.addEventListener('click', () => {
+                item.remove();
+                atualizarTotal();
+            });
+        });
+
+        atualizarTotal();
+    </script>
+
+</body>
+
+</html>
