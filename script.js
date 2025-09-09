@@ -2,6 +2,7 @@ const itens = document.querySelectorAll('.item-card');
 const totalEl = document.getElementById('total');
 const qtdeEl = document.getElementById('qtde');
 
+
 function atualizarTotal() {
     let total = 0;
     let qtde = 0;
@@ -15,9 +16,11 @@ function atualizarTotal() {
     qtdeEl.textContent = qtde;
 }
 
+
 itens.forEach(item => {
     const input = item.querySelector('.quantidade');
     const btnExcluir = item.querySelector('.btn-excluir');
+
 
     input.addEventListener('change', atualizarTotal);
     btnExcluir.addEventListener('click', () => {
@@ -25,5 +28,6 @@ itens.forEach(item => {
         atualizarTotal();
     });
 });
+
 
 atualizarTotal();

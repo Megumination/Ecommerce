@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponto & Vírgula | Início</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
     <!-- HEADER -->
@@ -21,12 +23,14 @@
             <a href="sobre.html">Sobre nós</a>
         </nav>
 
+
         <div class="icones">
             <a href="login.html"><img src="imagens/icone_login.png" alt="Login"></a>
             <a href="carrinho.html"><img src="imagens/carrinho.png" alt="Carrinho"></a>
             <img src="imagens/instagram.png" alt="Instagram">
         </div>
     </header>
+
 
     <!-- BANNER-->
     <section class="banner">
@@ -35,8 +39,10 @@
         <a href="#produtos" class="btn">Ver produtos</a>
     </section>
 
+
     <!-- PRODUTOS EM DESTAQUE -->
     <section id="produtos" class="produtos-destaque">
+       
         <h2>Produtos em destaque</h2>
         <div class="cards">
             <div class="card">
@@ -58,13 +64,115 @@
                 <button>Comprar</button>
             </div>
 
-            
+
+           
         </div>
     </section>
+   
+    <!-- Modal de compra -->
+    <div id="modalCompra" class="modal">
+        <div class="modal-content">
+        <!-- Botão de fechar -->
+        <span class="close-modal">X</span>
+   
+        <div class="modal-body">
+            <!-- Imagem do produto -->
+            <img id="modalImg" src="" alt="Produto">
+   
+            <!-- Informações do produto -->
+            <div class="modal-info">
+            <p><strong>Nome:</strong> <span id="modalNome">Produto</span></p>
+            <p><strong>Tamanho:</strong> <span id="modalTamanho">-</span></p>
+            <p><strong>Miolo:</strong> <span id="modalMiolo">-</span></p>
+            <p><strong>Material:</strong> <span id="modalMaterial">-</span></p>
+            <p><strong>Preço:</strong> <span id="modalPreco">R$19,90</span></p>
+   
+            <!-- Quantidade -->
+            <label for="modalQuantidade">Quantidade:</label>
+            <input type="number" id="modalQuantidade" value="1" min="1">
+            </div>
+        </div>
+   
+        <!-- Botão de confirmar compra -->
+        <button id="btnConfirmarCompra" class="btn">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+ 
+
 
     <!-- RODAPÉ -->
     <footer class="footer">
         <p>© 2025 Ponto & Vírgula. Todos os direitos reservados.</p>
     </footer>
 </body>
+
+
+<script>
+    // Seleciona elementos do modal
+    const modal = document.getElementById("modalCompra");
+    const modalNome = document.getElementById("modalNome");
+    const modalPreco = document.getElementById("modalPreco");
+    const modalImg = document.getElementById("modalImg");
+    const modalQuantidade = document.getElementById("modalQuantidade");
+    const btnConfirmar = document.getElementById("btnConfirmarCompra");
+    const btnFechar = document.querySelector(".close-modal");
+ 
+    // Seleciona todos os botões "Comprar" dos produtos
+    const btnsComprar = document.querySelectorAll(".produtos-destaque .card button");
+ 
+    // Objeto para armazenar o produto selecionado
+    let produtoSelecionado = {};
+ 
+    // Adiciona evento a cada botão "Comprar"
+    btnsComprar.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        const card = btn.parentElement; // pega o card do produto clicado
+ 
+        // Preenche o objeto com informações do produto
+        produtoSelecionado = {
+          nome: card.querySelector("h3").innerText,
+          preco: card.querySelector(".preco").innerText,
+          img: card.querySelector("img").src
+        };
+ 
+        // Atualiza o conteúdo do modal com os dados do produto
+        modalNome.innerText = produtoSelecionado.nome;
+        modalPreco.innerText = produtoSelecionado.preco;
+        modalImg.src = produtoSelecionado.img;
+        modalQuantidade.value = 1; // quantidade padrão
+ 
+        // Mostra o modal
+        modal.style.display = "flex";
+      });
+    });
+ 
+    // Fecha o modal quando clica no "X"
+    btnFechar.onclick = () => modal.style.display = "none";
+ 
+    // Fecha o modal quando clica fora do conteúdo
+    window.onclick = e => {
+      if(e.target == modal) modal.style.display = "none";
+    };
+ 
+    // Confirma a compra e adiciona ao carrinho
+    btnConfirmar.addEventListener("click", () => {
+      const quantidade = parseInt(modalQuantidade.value);
+ 
+      // Recupera o carrinho do localStorage ou cria um array vazio
+      let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+ 
+      // Adiciona o produto selecionado com a quantidade ao carrinho
+      carrinho.push({...produtoSelecionado, quantidade});
+ 
+      // Salva o carrinho atualizado no localStorage
+      localStorage.setItem("carrinho", JSON.stringify(carrinho));
+ 
+      // Mostra alerta de confirmação
+      alert(produtoSelecionado.nome + " adicionado ao carrinho!");
+ 
+      // Fecha o modal
+      modal.style.display = "none";
+    });
+  </script>
+ 
 </html>
