@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponto & Vírgula | Início</title>
+    <link rel="icon" href="imagens/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
     <!-- HEADER -->
@@ -17,34 +16,33 @@
             <img src="imagens/logo.png" alt="Logotipo Ponto & Vírgula">
         </div>
         <nav class="menu">
-            <a href="index.html">Início</a>
+            <a href="index.php">Início</a>
             <a href="promocoes.html">Promoções</a>
             <a href="parcerias.html">Parcerias</a>
             <a href="sobre.html">Sobre nós</a>
         </nav>
 
-
         <div class="icones">
             <a href="login.html"><img src="imagens/icone_login.png" alt="Login"></a>
             <a href="carrinho.html"><img src="imagens/carrinho.png" alt="Carrinho"></a>
-            <a href="https://www.instagram.com/pontovirgula.ltda/#">
+            <a href="https://www.instagram.com/pontovirgula.ltda/#" target="_blank">
                 <img src="imagens/instagram.png" alt="Instagram"></a>
         </div>
     </header>
 
-
     <!-- BANNER-->
-    <div class=pena> <img src="imagens/penaDouradaEBranca.png" alt="pena dourada e branca" width="250px"> </div>
+    <div class="pena">
+        <img src="imagens/penaDouradaEBranca.png" alt="pena dourada e branca" width="200px">
+    </div>
+
     <section class="banner">
         <h1>Organize sua rotina com estilo!</h1>
-        <p>Produtos de papelaria e agendas para quem gosta de unir arte, leveza e praticidade.</p> <a href="#produtos"
-            class="btn">Ver produtos</a>
+        <p>Produtos de papelaria e agendas para quem gosta de unir arte, leveza e praticidade.</p>
+        <a href="#produtos" class="btn">Ver produtos</a>
     </section>
-
 
     <!-- PRODUTOS EM DESTAQUE -->
     <section id="produtos" class="produtos-destaque">
-
         <h2>Produtos em destaque</h2>
         <div class="cards">
             <div class="card">
@@ -65,9 +63,6 @@
                 <p class="preco">R$19,99</p>
                 <button>Comprar</button>
             </div>
-
-
-
         </div>
     </section>
 
@@ -100,8 +95,6 @@
         </div>
     </div>
 
-
-
     <!-- RODAPÉ -->
     <footer class="footer">
         <div class="footer-container">
@@ -117,7 +110,7 @@
             <div class="footer-section links-uteis">
                 <h4>Links úteis</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="sobre.html">Sobre nós</a></li>
                     <li><a href="promocoes.html">Promoções</a></li>
                     <li><a href="#contato">Contato</a></li>
@@ -129,8 +122,8 @@
                 <h4>Contato</h4>
                 <p>Email: pontoevirgula@gmail.com</p>
                 <p>Telefone: +55 11 99999-9999</p>
-                <p>Endereço: Avenida Nações Unidas, 58-50, Núcleo Residencial Presidente Geisel, Bauru – SP, CEP
-                    17033-260</p>
+                <p>Endereço: Av. Nações Unidas, 58-50, Bairro Vargem Limpa, 
+                <br>Bauru – SP, CEP 17033-260</p>
             </div>
 
             <!-- Redes sociais -->
@@ -138,7 +131,7 @@
                 <h4>Siga-nos</h4>
                 <div class="social-icons">
                     <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
-                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" target="_blank" alt="Instagram" /></a>
                     <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" /></a>
                     <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" /></a>
                 </div>
@@ -168,7 +161,7 @@
         let produtoSelecionado = {};
 
         // Adiciona evento a cada botão "Comprar"
-        btnsComprar.forEach((btn, index) => {
+        btnsComprar.forEach((btn) => {
             btn.addEventListener("click", () => {
                 const card = btn.parentElement; // pega o card do produto clicado
 
@@ -218,5 +211,6 @@
             modal.style.display = "none";
         });
     </script>
+</body>
 
 </html>

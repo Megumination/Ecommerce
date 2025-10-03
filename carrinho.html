@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponto & Vírgula | Carrinho</title>
+    <link rel="icon" href="imagens/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
     <div class="carrinho-body">
         <div class="carrinho-container">
 
+            <div class="back-link">
+                <a href="index.php"><strong>X</strong></a>
+            </div>
 
             <!-- Carrinho -->
             <div class="carrinho-items">
                 <h2>🛒 CARRINHO</h2>
-
 
                 <!-- Produto 1 -->
                 <div class="item-card" data-id="1">
@@ -37,7 +38,6 @@
                     </div>
                 </div>
 
-
                 <!-- Produto 2 -->
                 <div class="item-card" data-id="2">
                     <img src="imagens/caneta-azul.png" alt="Caneta Azul">
@@ -55,9 +55,7 @@
                     </div>
                 </div>
 
-
             </div>
-
 
             <!-- Pagamento -->
             <div class="pagamento">
@@ -68,28 +66,23 @@
                     <p>QTDE: <span id="qtde">2</span></p>
                 </div>
 
-
                 <div class="metodos">
                     <img src="imagens/pix-icon.png" alt="PIX">
                     <img src="imagens/debito-icon.png" alt="Cartão de Débito">
                     <img src="imagens/credito-icon.png" alt="Cartão de Crédito">
                 </div>
 
-
                 <button class="btn-confirmar">CONFIRMAR PAGAMENTO</button>
             </div>
 
-
         </div>
     </div>
-
 
     <script>
         // Script simples pra atualizar total (mais tarde PHP pode gerar os valores)
         const itens = document.querySelectorAll('.item-card');
         const totalEl = document.getElementById('total');
         const qtdeEl = document.getElementById('qtde');
-
 
         function atualizarTotal() {
             let total = 0;
@@ -104,7 +97,6 @@
             qtdeEl.textContent = qtde;
         }
 
-
         itens.forEach(item => {
             const input = item.querySelector('.quantidade');
             const btnExcluir = item.querySelector('.btn-excluir');
@@ -117,15 +109,10 @@
             });
         });
 
-
         atualizarTotal();
 
-
-       
     </script>
 
-
 </body>
-
 
 </html>
