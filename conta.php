@@ -1,4 +1,6 @@
+
 <?php
+//vai na fé, pelo amor de deus
 session_start(); // iniciar sessão antes de qualquer saída HTML
 include "util.php";
 
