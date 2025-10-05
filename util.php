@@ -1,7 +1,7 @@
 <?php
     function conecta($params = "")
     {
-        $pdo = new PDO("pgsql: host=localhost; port=5432; dbname=eq2.ini2b;user=postgres;password=postgres");
+        $pdo = new PDO("pgsql: host=projetoscti.com.br; port=54432; dbname=eq2.ini2b;user=eq2.ini2b;password=eq22b594");
 
         return $pdo;
     }

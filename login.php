@@ -29,7 +29,7 @@
 
       <div class="extra-links">
         <a href="#">Esqueci minha senha</a>
-        <a href="#">Criar conta</a>
+        <a href="conta.php">Criar conta</a>
       </div>
     </div>
   </div>

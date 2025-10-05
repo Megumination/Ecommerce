@@ -23,7 +23,7 @@
         </nav>
 
         <div class="icones">
-            <a href="login.html"><img src="imagens/icone_login.png" alt="Login"></a>
+            <a href="login.php"><img src="imagens/icone_login.png" alt="Login"></a>
             <a href="carrinho.html"><img src="imagens/carrinho.png" alt="Carrinho"></a>
             <a href="https://www.instagram.com/pontovirgula.ltda/#" target="_blank">
                 <img src="imagens/instagram.png" alt="Instagram"></a>
