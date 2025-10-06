@@ -17,7 +17,7 @@
             <img src="imagens/logo.png" alt="Logotipo Ponto & Vírgula">
         </div>
         <nav class="menu">
-            <a href="index.html">Início</a>
+            <a href="index.php">Início</a>
             <a href="promocoes.html">Promoções</a>
             <a href="parcerias.html">Parcerias</a>
             <a href="sobre.html">Sobre nós</a>
@@ -25,7 +25,7 @@
 
 
         <div class="icones">
-            <a href="login.html"><img src="imagens/icone_login.png" alt="Login"></a>
+            <a href="login.php"><img src="imagens/icone_login.png" alt="Login"></a>
             <a href="carrinho.html"><img src="imagens/carrinho.png" alt="Carrinho"></a>
             <a href="https://www.instagram.com/pontovirgula.ltda/#">
                 <img src="imagens/instagram.png" alt="Instagram"></a>
