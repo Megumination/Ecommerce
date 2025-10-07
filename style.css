@@ -1,0 +1,952 @@
+/* IMPORTAR FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@700&display=swap');
+
+/* FONTES GERAIS */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #fae5e5;
+  color: #333;
+}
+
+/* TÍTULOS */
+h1,
+h2,
+h3 {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background: #1D3557;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ffe389;
+}
+
+.icones {
+  display: flex;
+  gap: 20px;
+}
+
+.icones img {
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icones img:hover {
+  transform: scale(1.2);
+}
+
+/* BANNER */
+.banner {
+  background: #f999b5;
+  color: #fff;
+  text-align: center;
+  padding: 75px 20px;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.pena {
+  flex: 0 0 auto;
+}
+
+/* Aqui deixamos o tamanho natural da imagem, grande no desktop */
+.pena img {
+  height: auto;
+  /* remove o width fixo, deixa a imagem como originalmente estava */
+}
+
+/* conteúdo de texto */
+.banner-text {
+  max-width: 600px;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+}
+
+.btn {
+  background: #b87286;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #dbb435;
+}
+
+/* Responsivo apenas para celular */
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+  }
+
+  .pena {
+    text-align: center;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .pena img {
+    width: 120px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  .banner h1 {
+    margin-top: 35px;
+    font-size: 1.8rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+
+/* PRODUTOS */
+.produtos-destaque {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.produtos-destaque h2 {
+  margin-bottom: 30px;
+  color: #1D3557;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin: 8px 0;
+}
+
+.card .preco {
+  color: #C9A227;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card button {
+  background: #edc263;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #f5d6a4;
+  ;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* SOBRE NÓS */
+.sobre-nos {
+  background-color: #fff;
+  border: 5px solid #F4BFBF;
+  border-radius: 16px;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 1000px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre-nos:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.sobre-nos .container {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.sobre-nos h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #1D3557;
+}
+
+.sobre-nos p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+/* BENEFÍCIOS */
+.beneficios {
+  background: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.beneficios h2 {
+  margin-bottom: 30px;
+  color: #1D3557;
+}
+
+.beneficios-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.beneficios-cards div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.beneficios-cards div {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+}
+
+.beneficios-cards h3 {
+  color: #f4a2a2;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #1D3557;
+  color: #f1f1f1;
+  padding: 40px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 15px;
+  color: #f999b5;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li,
+.footer-section a {
+  color: #f1f1f1;
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer-section a:hover {
+  color: #F4BFBF;
+  transition: 0.3s;
+}
+
+/* Ajustes específicos */
+.footer-section.links-uteis {
+  margin-left: 80px;
+}
+
+.footer-section.siga-nos {
+  margin-left: 40px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #aaa;
+  border-top: 1px solid #ffffff;
+  padding-top: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .banner {
+    padding: 60px 20px;
+  }
+
+  .cards,
+  .beneficios-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*reponsividade do footer*/
+@media (max-width: 900px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .footer-section.links-uteis,
+  .footer-section.siga-nos {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/*responsividade do sobre nós*/
+@media (max-width: 768px) {
+  .sobre-nos {
+    padding: 20px;
+    margin: 23px 28px;
+    max-width: 90%;
+  }
+
+  .sobre-nos h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .sobre-nos p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+}
+
+
+/* LOGIN */
+/* fundo com gradiente */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1D3557, #457B9D);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container central */
+.login-container {
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+}
+
+/* Card de login */
+.login-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Títulos */
+.login-card h2 {
+  color: #1D3557;
+  margin-bottom: 8px;
+}
+
+.login-card p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Grupos de inputs */
+.input-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.input-group input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.3s;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border: 1px solid #C9A227;
+}
+
+/* Botão de login */
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background: #C9A227;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background: #b08f20;
+}
+
+/* Links extras */
+.extra-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.extra-links a {
+  color: #1D3557;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.extra-links a:hover {
+  color: #C9A227;
+}
+
+/* Link voltar */
+.back-link {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.back-link a {
+  color: #555;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back-link a:hover {
+  color: #1D3557;
+}
+
+/* CARRINHO */
+.carrinho-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1D3557, #457B9D);
+}
+
+.carrinho-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: #f5f0f5;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  gap: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carrinho-items,
+.pagamento {
+  flex: 1;
+}
+
+.carrinho-items h2,
+.pagamento h2 {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #2b3e5c;
+  gap: 10px;
+}
+
+/* Cartões de item */
+.item-card {
+  display: flex;
+  background-color: #f5d6a4;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  align-items: center;
+  gap: 15px;
+}
+
+.item-card img {
+  width: 80px;
+  border-radius: 10px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1em;
+  color: #2b3e5c;
+}
+
+.item-info p {
+  margin: 2px 0;
+  font-size: 0.9em;
+  color: #2b3e5c;
+}
+
+/* Ações do item */
+.item-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+}
+
+.item-actions button {
+  background: none;
+  border: none;
+  color: #2b3e5c;
+  cursor: pointer;
+  font-size: 0.85em;
+}
+
+/* Pagamento */
+.pagamento {
+  background-color: #2b3e5c;
+  color: white;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.pagamento img {
+  width: 80px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.pagamento .total {
+  margin: 10px 0;
+}
+
+.pagamento .metodos {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.metodos img {
+  width: 50px;
+  cursor: pointer;
+}
+
+.btn-confirmar {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #f5d6a4;
+  color: #2b3e5c;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-confirmar:hover {
+  background-color: #e5b776;
+}
+
+/* Checkbox estilizado */
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #2b3e5c;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Modal: fundo escuro que cobre toda a tela */
+.modal {
+  display: none;
+  /* começa escondido */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* fundo semitransparente */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #f5f5f5;
+  padding: 25px;
+  border-radius: 12px;
+  width: 600px;
+  max-width: 90%;
+  text-align: left;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+
+.modal-body {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-body img {
+  width: 200px;
+  border-radius: 8px;
+}
+
+.modal-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-info p {
+  margin: 0;
+  color: #000;
+  font-size: 1rem;
+}
+
+/* Input de quantidade */
+#modalQuantidade {
+  width: 100px;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Botão de confirmar em toda a largura */
+#btnConfirmarCompra {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #e5b776;
+  color: #3971b8;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#btnConfirmarCompra:hover {
+  background-color: #e9cfac;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+  }
+
+  .modal-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-info {
+    text-align: center;
+  }
+}
+
+/*PROMOÇÕES*/
+.voltar {
+  text-decoration: none;
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  padding: 8px 16px;
+  background-color: #b87286;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.promo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.conteudo-promo h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #b76c88;
+}
+
+/*index pena*/
+.pena {
+  width: 50px;
+  height: 0px;
+  align-items: left;
+  margin-left: 200px;
+}
+
+/* CRIAR CONTA */
+.conta-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1D3557, #457B9D);
+}
+
+/* Container principal */
+.conta-container {
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+}
+
+/* Card branco */
+.conta-card {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de fechar (X) */
+.close-btn,
+.close-btn:visited,
+.close-btn:active {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  text-decoration: none !important;
+  color: #555;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Textos */
+.conta-card h2 {
+  color: #1D3557;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.conta-card p {
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.conta-card h3 {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+/* Formulário */
+.conta-card form {
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.input-group input:focus {
+  border: 1px solid #F4BFBF;
+}
+
+/* Botão */
+.btn-conta {
+  width: 100%;
+  padding: 12px;
+  background: #C9A227;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.btn-conta:hover {
+  background: #F4BFBF;
+}

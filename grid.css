@@ -1,0 +1,40 @@
+#app {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+    background-color: #F5F5F5;
+}
+;
+
+
+header {
+    grid-area: header;
+}
+
+
+nav {
+    grid-area: nav;
+}
+
+
+main {
+    grid-area: main;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+footer {
+    grid-area: footer;
+}
