@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponto & Vírgula | Carrinho</title>
+    <link rel="icon" href="imagens/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,6 +15,9 @@
     <div class="carrinho-body">
         <div class="carrinho-container">
 
+            <div class="back-link">
+                <a href="index.php"><strong>X</strong></a>
+            </div>
 
             <!-- Carrinho -->
             <div class="carrinho-items">
