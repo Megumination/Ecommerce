@@ -10,18 +10,14 @@
     min-height: 100vh;
     background-color: #F5F5F5;
 }
-;
-
 
 header {
     grid-area: header;
 }
 
-
 nav {
     grid-area: nav;
 }
-
 
 main {
     grid-area: main;
@@ -33,7 +29,6 @@ main {
     width: 100%;
     max-width: 1200px;
 }
-
 
 footer {
     grid-area: footer;
