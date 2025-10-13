@@ -456,6 +456,7 @@ h3 {
 
 /* Card de login */
 .login-card {
+  position: relative; /*adiconando a posição relativa*/
   background: #fff;
   border-radius: 14px;
   padding: 30px 25px;
@@ -949,4 +950,112 @@ h3 {
 
 .btn-conta:hover {
   background: #F4BFBF;
+}
+
+/*
+==================================================================
+== CÓDIGO PARA A ÁREA DE ADMINISTRAÇÃO ==
+==================================================================
+*/
+
+/* Container principal para as páginas de admin, como 'gerenciar_produtos.php' */
+.admin-container {
+  max-width: 1100px; /* Largura máxima da área de conteúdo */
+  margin: 40px auto; /* Centraliza na página com margem no topo/baixo */
+  padding: 30px;
+  background-color: #fff; /* Fundo branco para destacar */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave */
+}
+
+/* Título principal dentro do container de admin */
+.admin-container h2 {
+  color: #1D3557; /* Cor azul do seu tema */
+  margin-top: 0;
+  border-bottom: 2px solid #f0f0f0; /* Linha sutil de separação */
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+/* Tabela de listagem dos produtos */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse; /* Remove espaços entre as células */
+  margin-top: 20px;
+}
+
+.admin-table th, .admin-table td {
+  border: 1px solid #ddd; /* Borda cinza clara */
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle; /* Alinha o conteúdo no meio */
+}
+
+/* Cabeçalho da tabela */
+.admin-table th {
+  background-color: #1D3557; /* Cor azul do seu tema */
+  color: white;
+  font-family: 'Raleway', sans-serif; /* Fonte de títulos */
+}
+
+/* Efeito de "zebra" para melhor leitura das linhas */
+.admin-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Imagem do produto na tabela */
+.admin-table img {
+  max-width: 70px;
+  border-radius: 5px;
+}
+
+/* Links de 'Editar' e 'Excluir' na tabela */
+.admin-table a {
+  color: #1D3557; /* Cor azul do seu tema */
+  text-decoration: none;
+  font-weight: 600;
+}
+.admin-table a:hover {
+  text-decoration: underline;
+}
+
+/* Botão para "Adicionar Novo Produto" */
+.btn-adicionar {
+  display: inline-block;
+  background-color: #1D3557; /* Cor azul do seu tema */
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-adicionar:hover {
+  background-color: #3a5a8a; /* Tom de azul um pouco mais claro */
+}
+
+/* Formulários de Adicionar/Editar Produto */
+/* Reutiliza a classe 'input-group' que você já tem para os campos */
+.admin-container form .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    transition: border 0.3s;
+    box-sizing: border-box;
+    min-height: 100px; /* Altura mínima para a descrição */
+    resize: vertical; /* Permite que o usuário redimensione verticalmente */
+    font-family: 'Poppins', sans-serif; /* Garante a mesma fonte */
+}
+
+/* Reutiliza o estilo do botão de login para o botão de salvar */
+.admin-container form .btn-login {
+    /* O seu '.btn-login' já tem todos os estilos necessários */
+    width: auto; /* Para não ocupar 100% da largura */
+    padding-left: 30px;
+    padding-right: 30px;
 }

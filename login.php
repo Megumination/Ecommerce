@@ -40,7 +40,7 @@ if ($_POST) {
         <body class='login-body'>
           <div class='login-container'>
             <div class='login-card'>
-              <h2>Login efetuado com sucesso </h2>
+              <h2>Login efetuado com sucesso</h2>
               <p>Bem-vindo, {$_SESSION['login']}!</p>
               <p>Você será redirecionado para a página inicial em 5 segundos...</p>
               <a href='index.php'>Clique aqui se não for redirecionado</a>
@@ -66,7 +66,7 @@ if ($_POST) {
         <body class='login-body'>
           <div class='login-container'>
             <div class='login-card'>
-              <h2> Usuário ou senha incorretos</h2>
+              <h2>Usuário ou senha incorretos</h2>
               <p>Tente novamente.</p>
               <p>Você será redirecionado para a página de login em 5 segundos...</p>
               <a href='login.php'>Clique aqui se não for redirecionado</a>
@@ -90,10 +90,12 @@ if ($_POST) {
 
   <div class="login-container">
     <div class="login-card">
+
+      <a href="index.php" class="close-btn">x</a>
+
       <h2>Entrar</h2>
       <p>Acesse sua conta para continuar</p>
 
-      <!-- Formulário corrigido -->
       <form method="POST" action="login.php">
         <div class="input-group">
           <label for="usuario">E-mail</label>
