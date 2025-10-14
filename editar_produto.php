@@ -34,6 +34,7 @@ if (!$produto) {
 <head>
     <meta charset="UTF-8">
     <title>Editar Produto</title>
+    <link rel="icon" href="imagens/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>

@@ -15,6 +15,33 @@ include 'util.php'; // Inclui suas funções de banco de dados
 </head>
 
 <body>
+    <header class="header">
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logotipo Ponto & Vírgula">
+        </div>
+        <nav class="menu">
+            <a href="index.php">Início</a>
+            <a href="index.php">Início</a>
+            <a href="promocoes.html">Promoções</a>
+            <a href="parcerias.html">Parcerias</a>
+            <a href="sobre.html">Sobre nós</a>
+        </nav>
+
+        <div class="icones">
+            <a href="login.php"><img src="imagens/icone_login.png" alt="Login"></a>
+            <?php
+            // Se o usuário está logado E é um admin, mostra o link de gerenciamento
+            if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
+                echo '<a href="gerenciar_produtos.php"><img src="imagens/engrenagem.png" alt="Gerenciar"></a>'; 
+            }
+            ?>
+            
+            <a href="https://www.instagram.com/pontovirgula.ltda/#">
+                <img src="imagens/instagram.png" alt="Instagram">
+            </a>
+        </div>
+
+    </header>
     <form class="carrinho-body" action="finalizar_pedido.php" method="post">
         <div class="carrinho-container">
 
@@ -52,6 +79,55 @@ include 'util.php'; // Inclui suas funções de banco de dados
 
         <input type="hidden" name="carrinho_json" id="carrinho_json">
     </form>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Sobre a empresa -->
+            <div class="footer-section">
+                <h3>Ponto & Vírgula</h3>
+                <p>Organize com arte, viva com leveza!</p>
+                <p>Em breve na Semana do Colégio CTI Bauru 2025, nos dias 20 a 24 de outubro.</p>
+            </div>
+
+            <!-- Links úteis -->
+            <div class="footer-section links-uteis">
+                <h4>Links úteis</h4>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="promocoes.html">Promoções</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+
+            <!-- Contato -->
+            <div class="footer-section" id="contato">
+                <h4>Contato</h4>
+                <p>Email: pontoevirgula@gmail.com</p>
+                <p>Telefone: +55 11 99999-9999</p>
+                <p>Endereço: Avenida Nações Unidas, 58-50, Núcleo Residencial Presidente Geisel, Bauru – SP, CEP
+                    17033-260</p>
+            </div>
+
+            <!-- Redes sociais -->
+            <div class="footer-section">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" /></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" /></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Ponto & Vírgula. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
     <script>
         // Este script será executado assim que a página carregar

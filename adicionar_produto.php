@@ -12,6 +12,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true || $_SESSI
 <head>
     <meta charset="UTF-8">
     <title>Adicionar Produto</title>
+    <link rel="icon" href="imagens/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
