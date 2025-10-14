@@ -39,7 +39,7 @@
             <?php
             // Se o usuário está logado E é um admin, mostra o link de gerenciamento
             if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
-                echo '<a href="gerenciar_produtos.php"><img src="imagens/icone_config.png" alt="Gerenciar"></a>'; 
+                echo '<a href="gerenciar_produtos.php"><img src="imagens/engrenagem.png" alt="Gerenciar"></a>'; 
             }
             ?>
             

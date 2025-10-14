@@ -78,6 +78,16 @@ h3 {
   flex-wrap: wrap;
 }
 
+.pena {
+  flex: 0 0 auto;
+}
+
+/* Aqui deixamos o tamanho natural da imagem, grande no desktop */
+.pena img {
+  height: auto;
+  /* remove o width fixo, deixa a imagem como originalmente estava */
+}
+
 /* conteúdo de texto */
 .banner-text {
   max-width: 600px;
@@ -165,8 +175,7 @@ h3 {
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  flex: 1 1 250px;
-  width: 300px;
+  width: 250px;
   transition: transform 0.3s ease;
 }
 
@@ -392,14 +401,6 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-
-@media (max-width: 768px) {
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-}
 
   .footer-section.links-uteis,
   .footer-section.siga-nos {
@@ -697,6 +698,7 @@ h3 {
 /* Modal: fundo escuro que cobre toda a tela */
 .modal {
   display: none;
+  /* começa escondido */
   position: fixed;
   z-index: 999;
   left: 0;
@@ -704,6 +706,7 @@ h3 {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+  /* fundo semitransparente */
   justify-content: center;
   align-items: center;
 }
@@ -830,36 +833,13 @@ h3 {
   margin-bottom: 30px;
   color: #b76c88;
 }
-/*responsividade do promocoes*/
-@media (max-width: 768px) {
-  .conteudo {
-    padding: 200px;
-    margin: 230px 28px;
-    max-width: 9%;
-  }
-
-  .promo h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-
-  .promo p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
-  }
-}
 
 /*index pena*/
 .pena {
-  display: flex;
-  justify-content: center; /* centraliza no mobile e desktop */
-  margin: 0 auto 20px auto; /* margem inferior */
-}
-
-.pena img {
-  max-width: 100%; /* não corta a imagem */
-  height: auto;
+  width: 50px;
+  height: 0px;
+  align-items: left;
+  margin-left: 200px;
 }
 
 /* CRIAR CONTA */
@@ -990,7 +970,7 @@ h3 {
 
 /* Título principal dentro do container de admin */
 .admin-container h2 {
-  color: #1D3557; /* Cor azul do seu tema */
+  color: #1D3557;
   margin-top: 0;
   border-bottom: 2px solid #f0f0f0; /* Linha sutil de separação */
   padding-bottom: 15px;
@@ -1013,7 +993,7 @@ h3 {
 
 /* Cabeçalho da tabela */
 .admin-table th {
-  background-color: #1D3557; /* Cor azul do seu tema */
+  background-color: #1D3557;
   color: white;
   font-family: 'Raleway', sans-serif; /* Fonte de títulos */
 }
@@ -1031,7 +1011,7 @@ h3 {
 
 /* Links de 'Editar' e 'Excluir' na tabela */
 .admin-table a {
-  color: #1D3557; /* Cor azul do seu tema */
+  color: #1D3557;
   text-decoration: none;
   font-weight: 600;
 }
@@ -1057,7 +1037,7 @@ h3 {
 }
 
 /* Formulários de Adicionar/Editar Produto */
-/* Reutiliza a classe 'input-group' que você já tem para os campos */
+/* Reutiliza a classe 'input-group'*/
 .admin-container form .input-group textarea {
     width: 100%;
     padding: 12px;
@@ -1074,7 +1054,6 @@ h3 {
 
 /* Reutiliza o estilo do botão de login para o botão de salvar */
 .admin-container form .btn-login {
-    /* O seu '.btn-login' já tem todos os estilos necessários */
     width: auto; /* Para não ocupar 100% da largura */
     padding-left: 30px;
     padding-right: 30px;
