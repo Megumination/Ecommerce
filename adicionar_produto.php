@@ -5,7 +5,7 @@ session_start();
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true || $_SESSION['admin'] != true) {
     echo "<script>alert('Acesso negado!'); window.location.href = 'login.php';</script>";
     exit;
-}
+} 
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
