@@ -15,6 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponto & Vírgula | Início</title>
+    <link rel="icon" href="imagens/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,6 +25,7 @@
             <img src="imagens/logo.png" alt="Logotipo Ponto & Vírgula">
         </div>
         <nav class="menu">
+            <a href="index.php">Início</a>
             <a href="index.php">Início</a>
             <a href="promocoes.html">Promoções</a>
             <a href="parcerias.html">Parcerias</a>
@@ -50,8 +52,8 @@
     <div class=pena> <img src="imagens/penaDouradaEBranca.png" alt="pena dourada e branca" width="250px"> </div>
     <section class="banner">
         <h1>Organize sua rotina com estilo!</h1>
-        <p>Produtos de papelaria e agendas para quem gosta de unir arte, leveza e praticidade.</p> <a href="#produtos"
-            class="btn">Ver produtos</a>
+        <p>Produtos de papelaria e agendas para quem gosta de unir arte, leveza e praticidade.</p>
+        <a href="#produtos" class="btn">Ver produtos</a>
     </section>
 
     <section id="produtos" class="produtos-destaque">
@@ -186,6 +188,7 @@
             });
         });
     </script>
+</body>
 </body>
 
 </html>
