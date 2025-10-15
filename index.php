@@ -1,12 +1,12 @@
 <?php
-    // ---- CÓDIGO DE DEPURAÇÃO (temporário) ----
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-    // ---- FIM DO CÓDIGO DE DEPURAÇÃO ----
+// ---- CÓDIGO DE DEPURAÇÃO (temporário) ----
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+// ---- FIM DO CÓDIGO DE DEPURAÇÃO ----
 
-    // INICIA A SESSÃO PARA PODER USAR AS VARIÁVEIS $_SESSION
-    session_start(); 
+// INICIA A SESSÃO PARA PODER USAR AS VARIÁVEIS $_SESSION
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -34,89 +34,81 @@
         <div class="icones">
             <a href="login.php"><img src="imagens/icone_login.png" alt="Login"></a>
             <a href="carrinho.php"><img src="imagens/carrinho.png" alt="Carrinho"></a>
-            
+
             <?php
             // Se o usuário está logado E é um admin, mostra o link de gerenciamento
             if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
-                echo '<a href="gerenciar_produtos.php"><img src="imagens/engrenagem.png" alt="Gerenciar"></a>'; 
+                echo '<a href="gerenciar_produtos.php"><img src="imagens/engrenagem.png" alt="Gerenciar"></a>';
             }
             ?>
-            
-            <a href="https://www.instagram.com/pontovirgula.ltda/#">
+
+            <a href="https://www.instagram.com/pontovirgula.ltda/#" target="_blank">
                 <img src="imagens/instagram.png" alt="Instagram">
             </a>
         </div>
     </header>
 
-    <div class="pena"> <img src="imagens/penaDouradaEBranca.png" alt="pena dourada e branca" width="250px"> </div>
     <section class="banner">
         <h1>Organize sua rotina com estilo!</h1>
         <p>Produtos de papelaria e agendas para quem gosta de unir arte, leveza e praticidade.</p>
         <a href="#produtos" class="btn">Ver produtos</a>
     </section>
 
-   <!-- SEÇÃO DE BENEFÍCIOS -->
-<section class="section-beneficios">
-  <h2>Nossos Benefícios</h2>
-  <div class="circle-cards">
+    <!-- SEÇÃO DE BENEFÍCIOS -->
+    <section class="section-beneficios">
+        <h2>Nossos Benefícios</h2>
+        <div class="circle-cards">
 
-    <!-- Design exclusivo (brilhos/losango) -->
-    <div class="circle-card">
-      <div class="circle-icon">
-        <svg viewBox="0 0 24 24">
-          <polygon points="12,2 15,10 23,12 15,14 12,22 9,14 1,12 9,10" />
-        </svg>
-      </div>
-      <h3>Design exclusivo</h3>
-      <p>Modelos únicos criados pelos alunos, só aqui na nossa escola.</p>
-    </div>
+            <!-- Design exclusivo (brilhos/losango) -->
+            <div class="circle-card">
+                <div class="circle-icon">
+                    <svg viewBox="0 0 24 24">
+                        <polygon points="12,2 15,10 23,12 15,14 12,22 9,14 1,12 9,10" />
+                    </svg>
+                </div>
+                <h3>Design exclusivo</h3>
+                <p>Modelos únicos criados pelos alunos, só aqui na nossa escola.</p>
+            </div>
 
-    <!-- Alta qualidade (símbolo de "check") -->
-    <div class="circle-card">
-      <div class="circle-icon">
-        <svg viewBox="0 0 24 24">
-          <polyline points="4 12 10 18 20 6" />
-        </svg>
-      </div>
-      <h3>Alta qualidade</h3>
-      <p>Cadernos resistentes e perfeitos para todas as matérias.</p>
-    </div>
+            <!-- Alta qualidade (símbolo de "check") -->
+            <div class="circle-card">
+                <div class="circle-icon">
+                    <svg viewBox="0 0 24 24">
+                        <polyline points="4 12 10 18 20 6" />
+                    </svg>
+                </div>
+                <h3>Alta qualidade</h3>
+                <p>Cadernos resistentes e perfeitos para todas as matérias.</p>
+            </div>
 
-    <!-- Feito com carinho (coração) -->
-    <div class="circle-card">
-      <div class="circle-icon">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 21s-8-6-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 5-8 11-8 11z" />
-        </svg>
-      </div>
-      <h3>Feito com carinho</h3>
-      <p>Produzido pensando no conforto e estilo de cada estudante.</p>
-    </div>
+            <!-- Feito com carinho (coração) -->
+            <div class="circle-card">
+                <div class="circle-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21s-8-6-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 5-8 11-8 11z" />
+                    </svg>
+                </div>
+                <h3>Feito com carinho</h3>
+                <p>Produzido pensando no conforto e estilo de cada estudante.</p>
+            </div>
 
-  </div>
-</section>
-
+        </div>
+    </section>
 
 
     <section id="produtos" class="produtos-destaque">
         <h2>Produtos em destaque</h2>
         <div class="cards">
             <div class="card">
-                <img src="imagens/agenda1.jpg" alt="Agenda Preta">
-                <h3>Agenda Preta</h3>
-                <p class="preco">R$19,99</p>
+                <img src="imagens/cadernoIpe.png" alt="Caderno Ipê rosa">
+                <h3>Caderno Ipê Rosa</h3>
+                <p class="preco">R$23,00</p>
                 <button>Comprar</button>
             </div>
             <div class="card">
-                <img src="imagens/agenda2.jpg" alt="Agenda Rosa">
-                <h3>Agenda Rosa</h3>
-                <p class="preco">R$19,99</p>
-                <button>Comprar</button>
-            </div>
-            <div class="card">
-                <img src="imagens/agenda3.jpg" alt="Agenda Branca">
-                <h3>Agenda Branca</h3>
-                <p class="preco">R$19,99</p>
+                <img src="imagens/cadernoCTI.png" alt="Caderno CTI">
+                <h3>Caderno curso técnico CTI</h3>
+                <p class="preco">R$23,00</p>
                 <button>Comprar</button>
             </div>
         </div>
@@ -150,6 +142,7 @@
                 <h3>Ponto & Vírgula</h3>
                 <p>Organize com arte, viva com leveza!</p>
                 <p>Em breve na Semana do Colégio CTI Bauru 2025, nos dias 21 a 24 de outubro.</p>
+                <p>Horários: 8h às 12h e 19h às 22h</p>
             </div>
 
             <!-- Links úteis -->

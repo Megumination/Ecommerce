@@ -36,7 +36,7 @@ include 'util.php'; // Inclui suas funções de banco de dados
             }
             ?>
             
-            <a href="https://www.instagram.com/pontovirgula.ltda/#">
+            <a href="https://www.instagram.com/pontovirgula.ltda/#" target="_blank">
                 <img src="imagens/instagram.png" alt="Instagram">
             </a>
         </div>
@@ -89,6 +89,7 @@ include 'util.php'; // Inclui suas funções de banco de dados
                 <h3>Ponto & Vírgula</h3>
                 <p>Organize com arte, viva com leveza!</p>
                 <p>Em breve na Semana do Colégio CTI Bauru 2025, nos dias 21 a 24 de outubro.</p>
+                <p>Horários: 8h às 12h e 19h às 22h</p>
             </div>
 
             <!-- Links úteis -->

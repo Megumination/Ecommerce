@@ -1,9 +1,9 @@
 /* IMPORTAR FONTES */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 /* FONTES GERAIS */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Questrial', sans-serif;
   margin: 0;
   background: #fae5e5;
   color: #333;
@@ -13,7 +13,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Questrial', sans-serif;
 }
 
 /* HEADER */
@@ -78,16 +78,6 @@ h3 {
   flex-wrap: wrap;
 }
 
-.pena {
-  flex: 0 0 auto;
-}
-
-/* Aqui deixamos o tamanho natural da imagem, grande no desktop */
-.pena img {
-  height: auto;
-  /* remove o width fixo, deixa a imagem como originalmente estava */
-}
-
 /* conteúdo de texto */
 .banner-text {
   max-width: 600px;
@@ -123,19 +113,6 @@ h3 {
     flex-direction: column;
   }
 
-  .pena {
-    text-align: center;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-
-  .pena img {
-    width: 120px;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    padding: 10px;
-  }
-
   .banner h1 {
     margin-top: 35px;
     font-size: 1.8rem;
@@ -154,12 +131,13 @@ h3 {
 
 /* PRODUTOS */
 .produtos-destaque {
-  padding: 60px 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
 .produtos-destaque h2 {
   margin-bottom: 30px;
+  font-size: 1.7rem;
   color: #1D3557;
 }
 
@@ -250,14 +228,159 @@ h3 {
   margin-bottom: 18px;
 }
 
-/* BENEFÍCIOS */
-.beneficios {
+/* CARROSSEL DOS INTEGRANTES */
+.quem-somos-carrossel {
+  padding: 10px 0;
+  text-align: center;
+  background-color: #fae5e5;
+  /* Um fundo suave para destacar a seção */
+}
+
+.quem-somos-carrossel h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #1D3557;
+}
+
+.carrossel-container {
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  /* Adicionado para responsividade: garante que use quase toda a largura da tela em mobile */
+  width: 90%;
+}
+
+.carrossel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-membro {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px 40px;
+  /* Mais padding nas laterais em telas maiores */
+  flex-shrink: 0;
+  /* Impede que o slide diminua */
+}
+
+.slide-membro img {
+  /* Aumentado de 150px para 200px */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #ccc;
+  /* Borda sutil para as fotos */
+}
+
+.nome-membro {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.funcao-membro {
+  font-size: 1em;
+  color: #555;
+  font-style: italic;
+}
+
+/* Estilo dos Botões de Navegação (Setas) */
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  /* Garante que fiquem acima dos slides */
+  font-size: 1.5em;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/* RESPONSIVIDADE DO CARROSSEL INTEGRANTES */
+@media (max-width: 600px) {
+
+  /* 1. Ajusta as margens do container principal */
+  .carrossel-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* 2. Reduz o tamanho da foto e do padding do slide */
+  .slide-membro {
+    padding: 20px 10px;
+  }
+
+  .slide-membro img {
+    /* Aumentado de 100px para 120px no mobile, mantendo proporção */
+    width: 120px;
+    height: 120px;
+  }
+
+  /* 3. Reduz o tamanho do texto */
+  .nome-membro {
+    font-size: 1.2em;
+  }
+
+  .funcao-membro {
+    font-size: 0.9em;
+  }
+
+  /* 4. Reduz o tamanho e o posicionamento das setas */
+  .prev-btn,
+  .next-btn {
+    padding: 6px 10px;
+    font-size: 1em;
+    /* Posiciona mais próximos às laterais em mobile */
+    top: 40%;
+  }
+
+  .prev-btn {
+    left: 5px;
+  }
+
+  .next-btn {
+    right: 5px;
+  }
+
+  /* 5. Ajuste no título da seção em telas pequenas */
+  .quem-somos-carrossel h2 {
+    font-size: 1.5em;
+  }
+}
+
+/* MISSÃO, VISÃO E VALORES  */
+.missao {
   background: #ffffff;
-  padding: 60px 20px;
+  padding: 20px;
   text-align: center;
 }
 
-.beneficios h2 {
+.missao h2 {
   margin-bottom: 30px;
   color: #1D3557;
 }
@@ -267,19 +390,20 @@ h3 {
   padding-left: 0;
 }
 
-.beneficios-cards {
+.missao-cards {
   display: flex;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
-.beneficios-cards div:hover {
+.missao-cards div:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
 
-.beneficios-cards div {
+.missao-cards div {
   background: #ffffff;
   padding: 20px;
   border-radius: 10px;
@@ -287,7 +411,7 @@ h3 {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
 }
 
-.beneficios-cards h3 {
+.missao-cards h3 {
   color: #f4a2a2;
   margin-bottom: 10px;
 }
@@ -393,7 +517,7 @@ h3 {
   }
 
   .cards,
-  .beneficios-cards {
+  .missao-cards {
     flex-direction: column;
     align-items: center;
   }
@@ -461,7 +585,8 @@ h3 {
 
 /* Card de login */
 .login-card {
-  position: relative; /*adiconando a posição relativa*/
+  position: relative;
+  /*adiconando a posição relativa*/
   background: #fff;
   border-radius: 14px;
   padding: 30px 25px;
@@ -839,12 +964,30 @@ h3 {
   color: #b76c88;
 }
 
-/*index pena*/
-.pena {
-  width: 50px;
-  height: 0px;
-  align-items: left;
-  margin-left: 200px;
+/* RESPONSIVIDADE: Ajustes para Promoções (Dispositivos Móveis) */
+@media (max-width: 768px) {
+
+  /* 1. Ajuste do Bloco de Promoções */
+  .promo {
+    /* Garante que o padding não seja muito grande nas laterais */
+    padding: 20px;
+
+    /* Reduz o tamanho da fonte para caber melhor na tela */
+    font-size: 1.1rem;
+
+    /* Garante que ele use quase toda a largura, mas com margem */
+    width: 90%;
+    max-width: 100%;
+    /* Permite que ele se estique totalmente até 90% */
+    margin: 20px auto;
+  }
+
+  /* 2. Ajuste do Título */
+  .conteudo-promo h2 {
+    font-size: 1.8rem;
+    /* Reduz o tamanho do título principal */
+    margin-bottom: 20px;
+  }
 }
 
 /* CRIAR CONTA */
@@ -965,19 +1108,24 @@ h3 {
 
 /* Container principal para as páginas de admin, como 'gerenciar_produtos.php' */
 .admin-container {
-  max-width: 1100px; /* Largura máxima da área de conteúdo */
-  margin: 40px auto; /* Centraliza na página com margem no topo/baixo */
+  max-width: 1100px;
+  /* Largura máxima da área de conteúdo */
+  margin: 40px auto;
+  /* Centraliza na página com margem no topo/baixo */
   padding: 30px;
-  background-color: #fff; /* Fundo branco para destacar */
+  background-color: #fff;
+  /* Fundo branco para destacar */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* Sombra suave */
 }
 
 /* Título principal dentro do container de admin */
 .admin-container h2 {
   color: #1D3557;
   margin-top: 0;
-  border-bottom: 2px solid #f0f0f0; /* Linha sutil de separação */
+  border-bottom: 2px solid #f0f0f0;
+  /* Linha sutil de separação */
   padding-bottom: 15px;
   margin-bottom: 25px;
 }
@@ -985,22 +1133,27 @@ h3 {
 /* Tabela de listagem dos produtos */
 .admin-table {
   width: 100%;
-  border-collapse: collapse; /* Remove espaços entre as células */
+  border-collapse: collapse;
+  /* Remove espaços entre as células */
   margin-top: 20px;
 }
 
-.admin-table th, .admin-table td {
-  border: 1px solid #ddd; /* Borda cinza clara */
+.admin-table th,
+.admin-table td {
+  border: 1px solid #ddd;
+  /* Borda cinza clara */
   padding: 12px;
   text-align: left;
-  vertical-align: middle; /* Alinha o conteúdo no meio */
+  vertical-align: middle;
+  /* Alinha o conteúdo no meio */
 }
 
 /* Cabeçalho da tabela */
 .admin-table th {
   background-color: #1D3557;
   color: white;
-  font-family: 'Raleway', sans-serif; /* Fonte de títulos */
+  font-family: 'Raleway', sans-serif;
+  /* Fonte de títulos */
 }
 
 /* Efeito de "zebra" para melhor leitura das linhas */
@@ -1020,6 +1173,7 @@ h3 {
   text-decoration: none;
   font-weight: 600;
 }
+
 .admin-table a:hover {
   text-decoration: underline;
 }
@@ -1027,7 +1181,8 @@ h3 {
 /* Botão para "Adicionar Novo Produto" */
 .btn-adicionar {
   display: inline-block;
-  background-color: #1D3557; /* Cor azul do seu tema */
+  background-color: #1D3557;
+  /* Cor azul do seu tema */
   color: white;
   padding: 12px 22px;
   border-radius: 6px;
@@ -1038,35 +1193,40 @@ h3 {
 }
 
 .btn-adicionar:hover {
-  background-color: #3a5a8a; /* Tom de azul um pouco mais claro */
+  background-color: #3a5a8a;
+  /* Tom de azul um pouco mais claro */
 }
 
 /* Formulários de Adicionar/Editar Produto */
 /* Reutiliza a classe 'input-group'*/
 .admin-container form .input-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    font-size: 1rem;
-    transition: border 0.3s;
-    box-sizing: border-box;
-    min-height: 100px; /* Altura mínima para a descrição */
-    resize: vertical; /* Permite que o usuário redimensione verticalmente */
-    font-family: 'Poppins', sans-serif; /* Garante a mesma fonte */
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.3s;
+  box-sizing: border-box;
+  min-height: 100px;
+  /* Altura mínima para a descrição */
+  resize: vertical;
+  /* Permite que o usuário redimensione verticalmente */
+  font-family: 'Poppins', sans-serif;
+  /* Garante a mesma fonte */
 }
 
 /* Reutiliza o estilo do botão de login para o botão de salvar */
 .admin-container form .btn-login {
-    width: auto; /* Para não ocupar 100% da largura */
-    padding-left: 30px;
-    padding-right: 30px;
+  width: auto;
+  /* Para não ocupar 100% da largura */
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 /* SEÇÃO DAS BOLINHAS - ADAPTADA */
 .section-beneficios {
-  padding: 60px 20px;
+  padding: 25px 20px;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -1074,9 +1234,9 @@ h3 {
 }
 
 .section-beneficios h2 {
-  color: #e8be7e;
-  font-size: 2rem;
-  margin-bottom: 40px;
+  color: #F0C56E;
+  font-size: 1.7rem;
+  margin-bottom: 30px;
   font-weight: 700;
 }
 
@@ -1092,7 +1252,7 @@ h3 {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background-color: #e8be7e;
+  background-color: #F0C56E;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1129,25 +1289,26 @@ h3 {
 
 /* Específico para coração: preenchimento */
 .section-beneficios .circle-card:nth-child(3) .circle-icon svg {
-  fill: #fff; /* coração cheio */
-  stroke: #fff; 
+  fill: #fff;
+  /* coração cheio */
+  stroke: #fff;
 }
 
 /* Específico para brilhos/losangos: preenchimento parcial */
 .section-beneficios .circle-card:nth-child(1) .circle-icon svg {
-  fill: #fff; /* se quiser que brilhe mais, pode animar depois */
+  fill: #ffffff;
 }
 
 .section-beneficios .circle-card h3 {
   font-size: 1rem;
-  color: #fff;
+  color: #ffffff;
   margin: 6px 0 4px;
   font-weight: 700;
 }
 
 .section-beneficios .circle-card p {
   font-size: 0.8rem;
-  color: #fff;
+  color: #ffffff;
   line-height: 1.3;
   margin: 0;
 }
@@ -1159,6 +1320,7 @@ h3 {
     height: 130px;
     padding: 12px;
   }
+
   .section-beneficios .circle-card .circle-icon svg {
     width: 32px;
     height: 32px;
