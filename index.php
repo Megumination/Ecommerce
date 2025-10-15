@@ -26,7 +26,6 @@
         </div>
         <nav class="menu">
             <a href="index.php">Início</a>
-            <a href="index.php">Início</a>
             <a href="promocoes.html">Promoções</a>
             <a href="parcerias.html">Parcerias</a>
             <a href="sobre.html">Sobre nós</a>
@@ -49,12 +48,55 @@
         </div>
     </header>
 
-    <div class=pena> <img src="imagens/penaDouradaEBranca.png" alt="pena dourada e branca" width="250px"> </div>
+    <div class="pena"> <img src="imagens/penaDouradaEBranca.png" alt="pena dourada e branca" width="250px"> </div>
     <section class="banner">
         <h1>Organize sua rotina com estilo!</h1>
         <p>Produtos de papelaria e agendas para quem gosta de unir arte, leveza e praticidade.</p>
         <a href="#produtos" class="btn">Ver produtos</a>
     </section>
+
+   <!-- SEÇÃO DE BENEFÍCIOS -->
+<section class="section-beneficios">
+  <h2>Nossos Benefícios</h2>
+  <div class="circle-cards">
+
+    <!-- Design exclusivo (brilhos/losango) -->
+    <div class="circle-card">
+      <div class="circle-icon">
+        <svg viewBox="0 0 24 24">
+          <polygon points="12,2 15,10 23,12 15,14 12,22 9,14 1,12 9,10" />
+        </svg>
+      </div>
+      <h3>Design exclusivo</h3>
+      <p>Modelos únicos criados pelos alunos, só aqui na nossa escola.</p>
+    </div>
+
+    <!-- Alta qualidade (símbolo de "check") -->
+    <div class="circle-card">
+      <div class="circle-icon">
+        <svg viewBox="0 0 24 24">
+          <polyline points="4 12 10 18 20 6" />
+        </svg>
+      </div>
+      <h3>Alta qualidade</h3>
+      <p>Cadernos resistentes e perfeitos para todas as matérias.</p>
+    </div>
+
+    <!-- Feito com carinho (coração) -->
+    <div class="circle-card">
+      <div class="circle-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 21s-8-6-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 5-8 11-8 11z" />
+        </svg>
+      </div>
+      <h3>Feito com carinho</h3>
+      <p>Produzido pensando no conforto e estilo de cada estudante.</p>
+    </div>
+
+  </div>
+</section>
+
+
 
     <section id="produtos" class="produtos-destaque">
         <h2>Produtos em destaque</h2>
@@ -107,7 +149,7 @@
             <div class="footer-section">
                 <h3>Ponto & Vírgula</h3>
                 <p>Organize com arte, viva com leveza!</p>
-                <p>Em breve na Semana do Colégio CTI Bauru 2025, nos dias 20 a 24 de outubro.</p>
+                <p>Em breve na Semana do Colégio CTI Bauru 2025, nos dias 21 a 24 de outubro.</p>
             </div>
 
             <!-- Links úteis -->
@@ -126,7 +168,7 @@
                 <h4>Contato</h4>
                 <p>Email: pontoevirgula@gmail.com</p>
                 <p>Telefone: +55 11 99999-9999</p>
-                <p>Endereço: Avenida Nações Unidas, 58-50, Núcleo Residencial Presidente Geisel, Bauru – SP, CEP
+                <p>Endereço: Avenida Nações Unidas, n° 58-50, Bairro Vargem Limpa, Bauru – SP, CEP
                     17033-260</p>
             </div>
 

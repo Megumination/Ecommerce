@@ -88,7 +88,7 @@ include 'util.php'; // Inclui suas funções de banco de dados
             <div class="footer-section">
                 <h3>Ponto & Vírgula</h3>
                 <p>Organize com arte, viva com leveza!</p>
-                <p>Em breve na Semana do Colégio CTI Bauru 2025, nos dias 20 a 24 de outubro.</p>
+                <p>Em breve na Semana do Colégio CTI Bauru 2025, nos dias 21 a 24 de outubro.</p>
             </div>
 
             <!-- Links úteis -->
@@ -107,7 +107,7 @@ include 'util.php'; // Inclui suas funções de banco de dados
                 <h4>Contato</h4>
                 <p>Email: pontoevirgula@gmail.com</p>
                 <p>Telefone: +55 11 99999-9999</p>
-                <p>Endereço: Avenida Nações Unidas, 58-50, Núcleo Residencial Presidente Geisel, Bauru – SP, CEP
+                <p>Endereço: Avenida Nações Unidas, n° 58-50, Bairro Vargem Limpa, Bauru – SP, CEP
                     17033-260</p>
             </div>
 
