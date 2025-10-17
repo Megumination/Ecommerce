@@ -100,13 +100,17 @@ session_start();
         <h2>Produtos em destaque</h2>
         <div class="cards">
             <div class="card">
-                <img src="imagens/cadernoIpe.png" alt="Caderno Ipê rosa">
+                <div class="card-image-wrapper">
+                    <img src="imagens/cadernoIpe.png" alt="Caderno Ipê rosa">
+                </div>
                 <h3>Caderno Ipê Rosa</h3>
                 <p class="preco">R$23,00</p>
                 <button>Comprar</button>
             </div>
             <div class="card">
-                <img src="imagens/cadernoCTI.png" alt="Caderno CTI">
+                <div class="card-image-wrapper">
+                    <img src="imagens/cadernoCTI.png" alt="Caderno CTI">
+                </div>
                 <h3>Caderno curso técnico CTI</h3>
                 <p class="preco">R$23,00</p>
                 <button>Comprar</button>
@@ -121,10 +125,10 @@ session_start();
                 <img id="modalImg" src="" alt="Produto">
                 <div class="modal-info">
                     <p><strong>Nome:</strong> <span id="modalNome">Produto</span></p>
-                    <p><strong>Tamanho:</strong> <span id="modalTamanho">-</span></p>
-                    <p><strong>Miolo:</strong> <span id="modalMiolo">-</span></p>
-                    <p><strong>Material:</strong> <span id="modalMaterial">-</span></p>
-                    <p><strong>Preço:</strong> <span id="modalPreco">R$19,90</span></p>
+                    <p><strong>Tamanho:</strong> <span id="modalTamanho">A5 (14,8 x 21 cm)</span></p>
+                    <p><strong>Miolo:</strong> <span id="modalMiolo">Pautado simples</span></p>
+                    <p><strong>Material:</strong> <span id="modalMaterial">Papel sulfite</span></p>
+                    <p><strong>Preço:</strong> <span id="modalPreco">R$23,00</span></p>
                     <label for="modalQuantidade">Quantidade:</label>
                     <input type="number" id="modalQuantidade" value="1" min="1">
                 </div>
