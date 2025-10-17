@@ -263,7 +263,7 @@ html, body {
 }
 
 .quem-somos-carrossel h2 {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-size: 2rem;
   color: #1D3557;
 }
@@ -304,11 +304,11 @@ html, body {
 }
 
 .slide-membro img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   border: 3px solid #ccc;
 }
 
@@ -334,6 +334,51 @@ html, body {
   background-color: rgba(29, 53, 87, 0.9);
 }
 
+/* CONTAINER DA FOTO EQUIPE */
+.container-foto-grupo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbe4e7; /* mantém o fundo rosado pra combinar */
+  padding: 40px 0;
+  flex-direction: column; /* Para empilhar o conteúdo verticalmente */
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column; /* Empilha texto e imagem verticalmente */
+  align-items: center; /* Centraliza o conteúdo (texto e imagem) horizontalmente */
+  max-width: 900px; /* Limita a largura do wrapper */
+  text-align: center; /* Centraliza o texto dentro do parágrafo */
+  margin-bottom: 20px; /* Espaço entre o wrapper e outros elementos se houver */
+}
+
+.content-wrapper p {
+  margin-bottom: 20px; /* Adiciona espaço abaixo do texto e acima da imagem */
+  font-size: 1.1em; /* Ajuste o tamanho da fonte se necessário */
+  color: #333; /* Cor do texto */
+  padding: 0 15px; /* Adiciona um pouco de padding nas laterais do texto */
+}
+
+.foto-grupo {
+  width: 60%; /* ocupa cerca de metade da largura da tela */
+  max-width: 900px; /* limite para telas grandes */
+  border: 5px solid #fff; /* borda branca mais marcante */
+  border-radius: 20px; /* cantos arredondados */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.foto-grupo:hover {
+  transform: scale(1.02);
+}
+/* Responsivo */
+@media (max-width: 768px) {
+  .foto-grupo {
+    width: 85%; /* mais estreito no celular */
+  }
+}
 
 /* RESPONSIVIDADE DO CARROSSEL INTEGRANTES */
 @media (max-width: 600px) {
@@ -350,8 +395,8 @@ html, body {
   }
 
   .slide-membro img {
-    width: 120px;
-    height: 120px;
+    width: 230px;
+    height: 230px;
   }
 
   /* 3. Reduz o tamanho do texto */

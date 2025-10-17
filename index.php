@@ -126,8 +126,8 @@ session_start();
                 <div class="modal-info">
                     <p><strong>Nome:</strong> <span id="modalNome">Produto</span></p>
                     <p><strong>Tamanho:</strong> <span id="modalTamanho">A5 (14,8 x 21 cm)</span></p>
-                    <p><strong>Miolo:</strong> <span id="modalMiolo">Pautado simples</span></p>
-                    <p><strong>Material:</strong> <span id="modalMaterial">Papel sulfite</span></p>
+                    <p><strong>Miolo:</strong> <span id="modalMiolo">Papel sulfite pautado simples</span></p>
+                    <p><strong>Material:</strong> <span id="modalMaterial">Capa flexível</span></p>
                     <p><strong>Preço:</strong> <span id="modalPreco">R$23,00</span></p>
                     <label for="modalQuantidade">Quantidade:</label>
                     <input type="number" id="modalQuantidade" value="1" min="1">
